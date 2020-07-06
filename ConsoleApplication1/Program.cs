@@ -10,21 +10,30 @@ namespace ConsoleApplication1
             for (int i = 1; i < 101; i++)
             {
                 var result = i.ToString();
-                bool multofthree = false;
                 if (i % 3 == 0)
                 {
-                    multofthree = true;
                     result = "Fizz";
                 }
                 if (i % 5 == 0)
                 {
-                    if (multofthree == true)
+                    if (result != i.ToString())
                     {
                         result += "Buzz";
                     }
                     else
                     {
                         result = "Buzz";
+                    }
+                }
+                if (i % 7 == 0)
+                {
+                    if (result != i.ToString())
+                    {
+                        result += "Bang";
+                    }
+                    else
+                    {
+                        result = "Bang";
                     }
                 }
                 
