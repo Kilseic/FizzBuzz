@@ -14,6 +14,17 @@ namespace ConsoleApplication1
                 {
                     result = "Fizz";
                 }
+                if (i % 13 == 0)
+                {
+                    if (result != i.ToString())
+                    {
+                        result = "Fezz" + result;
+                    }
+                    else
+                    {
+                        result = "Fezz";
+                    }
+                }
                 if (i % 5 == 0)
                 {
                     if (result != i.ToString())
@@ -38,18 +49,14 @@ namespace ConsoleApplication1
                 }
                 if (i % 11 == 0)
                 {
-                    result = "Bong";
-                }
-
-                if (i % 13 == 0)
-                {
-                    if (result != i.ToString())
+                    if (result.Contains("Fezz"))
                     {
-                        result = "Fezz" + result;
+                        result = "FezzBuzz";
                     }
                     else
                     {
-                        result = "Fezz";
+                        
+                        result = "Bong";
                     }
                 }
 
