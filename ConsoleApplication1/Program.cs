@@ -36,8 +36,24 @@ namespace ConsoleApplication1
                         result = "Bang";
                     }
                 }
-                
-                
+                if (i % 11 == 0)
+                {
+                    result = "Bong";
+                }
+
+                if (i % 13 == 0)
+                {
+                    if (result != i.ToString())
+                    {
+                        result = "Fezz" + result;
+                    }
+                    else
+                    {
+                        result = "Fezz";
+                    }
+                }
+
+
                 Console.WriteLine(result);
             }
             
