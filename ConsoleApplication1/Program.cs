@@ -7,21 +7,28 @@ namespace ConsoleApplication1
     {
         public static void Main(string[] args)
         {
-            int i;
-            for (i = 1; i < 101; i++)
+            for (int i = 1; i < 101; i++)
             {
                 var result = i.ToString();
+                bool multofthree = false;
                 if (i % 3 == 0)
                 {
-                    if (i % 5 == 0)
+                    multofthree = true;
+                    result = "Fizz";
+                }
+                if (i % 5 == 0)
+                {
+                    if (multofthree == true)
                     {
-                        result = "FizzBuzz";
+                        result += "Buzz";
                     }
                     else
                     {
-                        result = "Fizz";
+                        result = "Buzz";
                     }
-                } 
+                }
+                
+                
                 Console.WriteLine(result);
             }
             
