@@ -66,17 +66,11 @@ namespace ConsoleApplication1
                     if (result != i.ToString()) 
                     {
                         int savedlength = (result.Length) / 4;
-                        List<string> temp = new List<string>();
-                        for (int j = 0; j < savedlength; j++)
-                        {
-                            temp.Add(result.Substring(j*4,4));
-                        }
-
+                        string temp = result;
                         result = "";
-
-                        for (int j = savedlength; j > 0 ; j--)
+                        for (int j = savedlength; j > 0; j--)
                         {
-                            result += temp[j-1];
+                            result += temp.Substring(j*4-4,4);
                         }
                     }
 
