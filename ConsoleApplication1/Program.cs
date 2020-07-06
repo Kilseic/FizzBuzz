@@ -7,7 +7,7 @@ namespace ConsoleApplication1
     {
         public static void Main(string[] args)
         {
-            for (int i = 1; i < 101; i++)
+            for (int i = 1; i < 250; i++)
             {
                 var result = i.ToString();
                 if (i % 3 == 0)
@@ -18,7 +18,7 @@ namespace ConsoleApplication1
                 {
                     if (result != i.ToString())
                     {
-                        result = "Fezz" + result;
+                        result += "Fezz";
                     }
                     else
                     {
