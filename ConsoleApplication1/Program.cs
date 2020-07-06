@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Security.AccessControl;
 
 namespace ConsoleApplication1
@@ -7,7 +9,7 @@ namespace ConsoleApplication1
     {
         public static void Main(string[] args)
         {
-            for (int i = 1; i < 250; i++)
+            for (int i = 1; i < 256; i++)
             {
                 var result = i.ToString();
                 if (i % 3 == 0)
@@ -59,6 +61,24 @@ namespace ConsoleApplication1
                         result = "Bong";
                     }
                 }
+
+                if (i % 17 == 0)
+                    if (result != i.ToString()) 
+                    {
+                        int savedlength = (result.Length) / 4;
+                        List<string> temp = new List<string>();
+                        for (int j = 0; j < savedlength; j++)
+                        {
+                            temp.Add(result.Substring(j*4,4));
+                        }
+
+                        result = "";
+
+                        for (int j = savedlength; j > 0 ; j--)
+                        {
+                            result += temp[j-1];
+                        }
+                    }
 
 
                 Console.WriteLine(result);
